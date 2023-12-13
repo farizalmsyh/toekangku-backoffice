@@ -1,0 +1,95 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+
+$ui-cyan: #109C87;
+$ui-cyan-light: #109C87;
+$ui-cyan-dark: #0c7565;
+$ui-cyan-darker: #084a40;
+
+$ui-primary: #C07F00;
+$ui-primary-light: #FAC433;
+$ui-primary-dark: #916101;
+$ui-primary-darker: #754f01;
+
+$ui-secondary: #FFD95A;
+$ui-secondary-light: #FFFCCE;
+$ui-secondary-dark: #dbba4d;
+$ui-secondary-darker: #9e8739;
+
+$ui-tertiary: #c2eae4;
+$ui-tertiary-light: #ebf8f6;
+$ui-tertiary-dark: #2c8c7d;
+$ui-tertiary-darker: #14413a;
+
+$ui-accent: #ba5f3a;
+$ui-accent-light: #f8efeb;
+$ui-accent-dark: #8c472c;
+$ui-accent-darker: #412114;
+
+$ui-surface: #FAC433;
+$ui-surface-light: #f2f6f6;
+$ui-surface-dark: #d9e5e3;
+$ui-surface-white: #ffffff;
+
+$ui-success: #06874d;
+$ui-success-light: #e6f3ed;
+$ui-success-dark: #05653a;
+$ui-success-darker: #022f1b;
+
+$ui-info: #2f5cef;
+$ui-info-light: #eaeffd;
+$ui-info-dark: #2345b3;
+$ui-info-darker: #102054;
+
+$ui-warning: #e88f00;
+$ui-warning-light: #fdf4e6;
+$ui-warning-dark: #ae6b00;
+$ui-warning-darker: #513200;
+
+$ui-danger: #c61d48;
+$ui-danger-light: #f9e8ed;
+$ui-danger-dark: #951636;
+$ui-danger-darker: #450a19;
+
+$theme-colors: (
+  "ui-cyan": $ui-cyan,
+  "ui-cyan-light": $ui-cyan-light,
+  "ui-cyan-dark": $ui-cyan-dark,
+  "ui-cyan-darker": $ui-cyan-darker,
+  "ui-primary": $ui-primary,
+  "ui-primary-light": $ui-primary-light,
+  "ui-primary-dark": $ui-primary-dark,
+  "ui-primary-darker": $ui-primary-darker,
+  "ui-secondary": $ui-secondary,
+  "ui-secondary-light": $ui-secondary-light,
+  "ui-secondary-dark": $ui-secondary-dark,
+  "ui-secondary-darker": $ui-secondary-darker,
+  "ui-tertiary": $ui-tertiary,
+  "ui-tertiary-light": $ui-tertiary-light,
+  "ui-tertiary-dark": $ui-tertiary-dark,
+  "ui-tertiary-darker": $ui-tertiary-darker,
+  "ui-accent": $ui-accent,
+  "ui-accent-light": $ui-accent-light,
+  "ui-accent-dark": $ui-accent-dark,
+  "ui-accent-darker": $ui-accent-darker,
+  "ui-surface": $ui-surface,
+  "ui-surface-light": $ui-surface-light,
+  "ui-surface-dark": $ui-surface-dark,
+  "ui-surface-white": $ui-surface-white,
+  "ui-success": $ui-success,
+  "ui-success-light": $ui-success-light,
+  "ui-success-dark": $ui-success-dark,
+  "ui-success-darker": $ui-success-darker,
+  "ui-info": $ui-info,
+  "ui-info-light": $ui-info-light,
+  "ui-info-dark": $ui-info-dark,
+  "ui-info-darker": $ui-info-darker,
+  "ui-warning": $ui-warning,
+  "ui-warning-light": $ui-warning-light,
+  "ui-warning-dark": $ui-warning-dark,
+  "ui-warning-darker": $ui-warning-darker,
+  "ui-danger": $ui-danger,
+  "ui-danger-light": $ui-danger-light,
+  "ui-danger-dark": $ui-danger-dark,
+  "ui-danger-darker": $ui-danger-darker,
+);

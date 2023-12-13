@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+   url(~assets/font/Inter/static/Inter-Regular.ttf) format("truetype");
+}
+body {
+  background-color: #f3f3f3;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+@media only screen and (max-width: 991px) {
+  .only-desktop {
+    display: none !important;
+  }
+  .only-mobile {
+    display:inherit !important;
+  }
+}
+.only-mobile {
+  display: none !important;
+}
+.only-desktop {
+  display: inherit;
+}
+
+/* Fullcalendar */
+.fc-toolbar-title {
+  font-weight: 700;
+}
+.fc .fc-scrollgrid-liquid {
+  border: none !important;
+}
+.fc-col-header-cell-cushion  {
+  color: #000;
+}
+.fc-theme-standard td, .fc-theme-standard th {
+  border: 0px !important;
+}
+.fc .fc-daygrid-day-number{
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #FFF !important;
+  color: #FFF;
+}
+.fc .fc-daygrid-day .fc-daygrid-day-top{
+  width: fit-content;
+}
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-top{
+  background-color: #ba5f3a !important;
+  width: fit-content;
+  border-radius: 50%;
+  padding: 0px 8px;
+}
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-top .fc-daygrid-day-number{
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 700;
+}
+.fc-daygrid-event {
+  padding-left: 10px;
+  border-radius: 10px !important;
+}
+.fc-toolbar-chunk .btn-group {
+  background-color: #FAC433;
+  border-radius: 100px;
+}
+.fc-today-button {
+  margin-left: 0px !important;
+  border-radius: 0px !important;
+}
+.fc-next-button:hover {
+  background-color: #C07F00;
+  border-color: #C07F00;
+}
+.fc-prev-button:hover {
+  background-color: #C07F00;
+  border-color: #C07F00;
+}
+.fc-next-button {
+  margin-left: 0px !important;
+  border-radius: 0px 100px 100px 0px !important;
+}
+.fc-prev-button {
+  margin-left: 0px !important;
+  border-radius: 100px 0px 0px 100px !important;
+}
+.btn-custom-fc {
+  color: #C07F00;
+  background-color: #EBF3E4;
+  border-color: #EBF3E4;
+}
+.btn-custom-fc.fc-monthBtn-button {
+  border-radius: 100px !important;
+}
+.btn-custom-fc.fc-weekBtn-button {
+  border-radius: 100px !important;
+}
+.btn-custom-fc.fc-dayBtn-button {
+  border-radius: 100px !important;
+}
+.btn-custom-fc.fc-trainingBtn-button {
+  border-radius: 100px !important;
+}
+.btn-custom-fc.fc-campusBtn-button {
+  border-radius: 100px !important;
+}
+.btn-custom-fc.fc-teacherBtn-button {
+  border-radius: 100px !important;
+}
+.btn-custom-fc:hover {
+  color: #FFF;
+}
+.btn-custom-fc.active {
+  color: #FFF;
+  background-color: #C07F00;
+  border-color: #C07F00;
+}
+.btn-sa-confirm {
+  border: 2px solid #0085E5 !important;
+  color: #0085E5 !important;
+  background-color: #FFF !important;
+}
+.btn-sa-cancel {
+  border: 2px solid #FF4A3D !important;
+  color: #FF4A3D !important;
+  background-color: #FFF !important;
+}
+.br-100 {
+  border-radius: 100px !important;
+}
+.btn-group .btn {
+  font-size: 14px;
+}
+.fbt {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.fbt:hover {
+  text-decoration: none;
+}
+.table-responsive {
+  max-height: 100% !important;
+}
