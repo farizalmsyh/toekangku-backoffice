@@ -4,13 +4,13 @@ export default function ({ $axios, redirect, app }) {
       config.headers.common['Authorization'] = `${localStorage.getItem('token')}`;
     }
   })
-  $axios.onError(error => {
-    let url = app.router.currentRoute.path
-    let status = error?.response?.status; 
-    if(status === 401) {
-      redirect(`/login?returnUrl=${url}`)
-    } else {
-      console.log(error)
-    }
-  })
+  // $axios.onError(error => {
+  //   let url = app.router.currentRoute.path
+  //   let status = error?.response?.status; 
+  //   if(status === 401) {
+  //     // redirect(`/login?returnUrl=${url}`)
+  //   } else {
+  //     console.log(error)
+  //   }
+  // })
 }
