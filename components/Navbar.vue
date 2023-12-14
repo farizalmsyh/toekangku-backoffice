@@ -1,9 +1,9 @@
 <template>
   <b-navbar class="p-0 pr-lg-3 pt-lg-2" toggleable="lg" :sticky="true" type="light" :variant="bgColor" shadow>
     <b-navbar class="p-0" variant="faded" type="light">
-      <b-navbar-brand class="p-0" href="#" @click="redirected">
+      <b-navbar-brand class="p-0" href="javascript:void(0)" @click="redirected">
         <div class="brand-box px-3 pt-1">
-          <img height="auto" width="200px" :src="auth?.user?.picture_url ?? '/images/logo.png'" alt="Logo">
+          <img height="auto" width="200px" :src="'/images/logo.png'" alt="Logo">
         </div>
       </b-navbar-brand>
     </b-navbar>
@@ -38,7 +38,7 @@
               </b-col>
             </b-row>
           </NuxtLink>
-          <div v-show="isMatch(['postingan'])" class="selected only-desktop"><div class="rec-1"></div><div class="rec-2"></div><div class="rec-3"></div></div>
+          <div v-show="isMatch(['postingan', 'postingan-pekerja'])" class="selected only-desktop"><div class="rec-1"></div><div class="rec-2"></div><div class="rec-3"></div></div>
         </b-nav-item>
         <b-nav-item class="mx-lg-4">
           <NuxtLink to="/pengguna" class="text-decoration-none">
@@ -53,7 +53,7 @@
               </b-col>
             </b-row>
           </NuxtLink>
-          <div v-show="isMatch(['pengguna'])" class="selected only-desktop"><div class="rec-1"></div><div class="rec-2"></div><div class="rec-3"></div></div>
+          <div v-show="isMatch(['pengguna', 'pengguna-create', 'pengguna-edit-idUser', 'pengguna-pekerja', 'pengguna-pelamar'])" class="selected only-desktop"><div class="rec-1"></div><div class="rec-2"></div><div class="rec-3"></div></div>
         </b-nav-item>
         <b-nav-item class="mx-lg-4">
           <NuxtLink to="/bantuan" class="text-decoration-none">
@@ -86,7 +86,7 @@
               </b-row>
             </template>
             <b-dropdown-item href="javascript:void(0)" class="text-black">
-              <NuxtLink class="text-decoration-none text-black" to="/setting/pelatih">Setelan</NuxtLink>
+              <NuxtLink class="text-decoration-none text-black" to="/pengaturan">Pengaturan</NuxtLink>
             </b-dropdown-item>
             <b-dropdown-item href="javascript:void(0)" @click="logoutAlert()">Keluar</b-dropdown-item>
           </b-nav-item-dropdown>
@@ -100,12 +100,12 @@
                 <em class="bx bx-chevron-down nav-item-icon"></em>
               </b-col>
               <b-col>
-                <img src="/images/user.png" width="50" height="50" class="rounded-circle border-ui-primary" alt="Profile">
+                <img :src="auth?.user?.picture_url ?? '/images/user.png'" width="50" height="50" class="rounded-circle border-ui-primary" alt="Profile">
               </b-col>
             </b-row>
           </template>
           <b-dropdown-item href="javascript:void(0)">
-            <NuxtLink class="text-decoration-none text-ui-primary font-weight-bolder" to="/setting/pelatih"><em class="bx bx-wrench font-weight-bolder mr-2"></em>Setelan</NuxtLink>
+            <NuxtLink class="text-decoration-none text-ui-primary font-weight-bolder" to="/pengaturan"><em class="bx bx-wrench font-weight-bolder mr-2"></em>Pengaturan</NuxtLink>
           </b-dropdown-item>
           <b-dropdown-item href="javascript:void(0)" @click="logoutAlert()">
             <span class="text-decoration-none text-ui-primary font-weight-bolder"><em class="bx bx-log-out-circle font-weight-bolder mr-2"></em>Keluar</span>
@@ -149,11 +149,20 @@ export default {
     redirected() {
       this.$router.push('/')
     },  
-    logout() {
-      this.$store.commit('auth/removeAuth')
-      localStorage.removeItem('token')
-      this.$router.push('/login')
-      this.$toast.success('Logout Success!')
+    async logout() {
+      await this.$axios.$post(`/auth/logout`)
+      .then((res) => {
+        if(res.success) {
+            this.$store.commit('auth/removeAuth')
+            localStorage.removeItem('token')
+            this.$toast.success(res?.message)
+            this.$router.push('/login')
+          } else {
+            this.$toast.error(res?.message)
+          }
+        }).catch(err => {
+          this.$toast.error(err?.response?.data?.message)
+        })
     },
     handleScroll () {
       let y = window.scrollY / 150

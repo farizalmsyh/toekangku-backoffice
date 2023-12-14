@@ -10,7 +10,7 @@
         <b-col lg="12" class="mb-4">
           <b-card class="border-rounded border-0 shadow-md">
             <b-row>
-              <b-col cols="3">
+              <b-col lg="3" class="mb-2">
                 <b-row>
                   <b-col cols="auto">
                     <select v-model="limit" class="display-row form-control form-control-sm">
@@ -24,9 +24,9 @@
                   </b-col>
                 </b-row>
               </b-col>
-              <b-col cols="9" class="text-right">
+              <b-col lg="9" class="text-right">
                 <b-row class="justify-content-end">
-                  <b-col cols="auto">
+                  <b-col lg="auto">
                     <b-input-group class="search-field br-100" size="sm">
                       <template #prepend>
                         <b-input-group-text class="bg-transparent border-0"><em class="bx bx-search-alt"></em></b-input-group-text>
@@ -108,15 +108,6 @@
           { key: 'title', label: 'Judul' },
           { key: 'description', label: 'Deskripsi' },
           { key: 'profesions', label: 'Profesi' },
-          { key: 'payment', label: 'Pembayaran' },
-          { key: 'payment_type', label: 'Satuan' },
-          { key: 'job_start_date', label: 'Tanggal Mulai' },
-          { key: 'location_province', label: 'Provinsi' },
-          { key: 'location_city', label: 'Kota/Kabupaten' },
-          { key: 'location_subdistrict', label: 'Kecamatan' },
-          { key: 'location_village', label: 'Kelurahan' },
-          { key: 'location_zipcode', label: 'Kode POS' },
-          { key: 'location_detail', label: 'Alamat' },
           { key: 'total_interest', label: 'Total Minat' },
           { key: 'created_at', label: 'Tanggal Dibuat' },
           { key: 'closed', label: 'Ditutup' },

@@ -57,7 +57,6 @@ export default {
       try {
         let data = this.form;
         await this.$axios.$post('/auth/login', data).then((resp) => {
-          console.log(resp)
           if(resp.success) {
             this.$toast.success(resp?.message)
             localStorage.setItem('token', resp.data.token)

@@ -4,7 +4,7 @@
       <b-col lg="12" class="mb-4">
         <b-card class="border-rounded border-0 shadow-md">
           <b-row>
-            <b-col cols="3">
+            <b-col lg="3" class="mb-2">
               <b-row>
                 <b-col cols="auto">
                   <select v-model="limit" class="display-row form-control form-control-sm">
@@ -18,9 +18,9 @@
                 </b-col>
               </b-row>
             </b-col>
-            <b-col cols="9" class="text-right">
+            <b-col lg="9" class="text-right">
               <b-row class="justify-content-end">
-                <b-col cols="auto">
+                <b-col lg="auto">
                   <b-input-group class="search-field br-100" size="sm">
                     <template #prepend>
                       <b-input-group-text class="bg-transparent border-0"><em class="bx bx-search-alt"></em></b-input-group-text>
@@ -83,6 +83,7 @@ export default {
         { key: 'email', label: 'Email' },
         { key: 'message', label: 'Pesan' },
         { key: 'created_at', label: 'Tanggal' },
+        { key: 'empty', label: '' },
       ],
       search: '',
       limit: 10,
